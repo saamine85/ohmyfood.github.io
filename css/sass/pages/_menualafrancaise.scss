@@ -36,6 +36,7 @@ section {
       }
     }
     .cardText {
+      position: relative;
       margin: 12px 10px;
       background-color: #fff;
       padding-top: 15px;
@@ -54,10 +55,43 @@ section {
         font-size: 17px;
         display: flex;
         justify-content: space-between;
+        // white-space: nowrap;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
         .price {
-          margin-right: 15px;
+          margin-right: 20px;
+          // margin-left: 15px;
           font-weight: bold;
         }
+      }
+      .display {
+        // display: block;
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0px;
+        border-radius: 0px 15px 15px 0px;
+        margin: 0px;
+        width: 20%;
+        height: 100%;
+        background-color: $TertiaryColor;
+        box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+
+        .fa-check-circle {
+          color: #fff;
+          font-size: 26px;
+          position: relative;
+          top: 35%;
+          left: 35%;
+
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+        }
+        // display: none;
+        // padding-top: 15px;
+        // padding-bottom: 15px;
       }
     }
     // .cardText {

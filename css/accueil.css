@@ -101,19 +101,10 @@ ul {
   }
 }
 
-@media (min-width: 1200px) {
-  .shrik,
-  .note {
-    top: -134%;
-    right: 5%;
-    font-size: 28px;
-  }
-}
-
 .shrik .fa-heart,
 .note .fa-heart {
   font-size: 25px;
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 @media (min-width: 1200px) {
@@ -126,9 +117,6 @@ ul {
 
 @media (min-width: 1200px) {
   .note {
-    position: absolute;
-    top: -60%;
-    right: 5%;
     font-size: 28px;
     padding-top: 20px;
   }
@@ -451,7 +439,7 @@ header span {
     margin-bottom: 40px;
   }
   .main section::before {
-    content: "Restaurant";
+    content: "Restaurants";
     position: absolute;
     font-size: 24px;
     margin-left: 30px;

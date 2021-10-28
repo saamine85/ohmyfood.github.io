@@ -18,26 +18,17 @@ ul {
   @include tab {
     font-size: 28px;
   }
-  @include large-screen {
-    top: -134%;
-    right: 5%;
-    font-size: 28px;
-  }
   .fa-heart {
     font-size: 25px;
-    margin-right: 40px;
+    margin-right: 30px;
     @include large-screen {
       font-size: 27px;
       padding-left: 20px;
     }
   }
 }
-
 .note {
   @include large-screen {
-    position: absolute;
-    top: -60%;
-    right: 5%;
     font-size: 28px;
     padding-top: 20px;
   }
