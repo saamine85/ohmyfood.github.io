@@ -1,18 +1,15 @@
 header {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   top: 0;
   @include tab {
     text-align: left;
-    margin: 0px;
     padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0 2px 9px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 4px 5px 0px #b4b4b4;
   }
   @include laptop {
-    margin-bottom: 0px;
-  }
-  @include large-screen {
+    // box-shadow: 1px 4px 5px 0px #b4b4b4;
+    margin: 0px;
   }
 
   img {

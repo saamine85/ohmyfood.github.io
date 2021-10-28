@@ -57,14 +57,15 @@ header {
   @include tab {
     position: absolute;
     right: 30px;
-    top: 0px;
+    top: 10px;
     padding-top: 20px;
     box-shadow: none;
     width: fit-content;
     background-color: #fff;
   }
   @include laptop {
-    right: 100px;
+    top: 0px;
+    right: 60px;
   }
   span {
     position: relative;
@@ -72,7 +73,7 @@ header {
     top: -2px;
     i {
       font-size: 16px;
-      @include laptop {
+      @include tab {
         font-size: 24px;
       }
     }
@@ -83,7 +84,7 @@ header {
     padding-left: 0px;
     font-size: 16px;
     font-weight: bold;
-    @include laptop {
+    @include tab {
       font-size: 24px;
     }
   }
