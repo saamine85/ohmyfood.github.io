@@ -1,3 +1,68 @@
+@keyframes imgLoad {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shrik-title {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardMenu-load {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cardText {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cardTextFc {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cardTextSc {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -97,6 +162,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: 1s shrik-title  ease-in;
 }
 
 @media (min-width: 768px) {
@@ -144,6 +210,14 @@ button,
   background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
   font-weight: 700;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.9s 0.2s opacity, box-shadow cubic-bezier(0, 0.26, 0.71, 0.97);
+}
+
+button:hover,
+.command:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .command {

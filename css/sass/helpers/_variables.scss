@@ -3,6 +3,10 @@ $primarycolor: #9356dc;
 $secondaryColor: #ff79da;
 $TertiaryColor: #99e2d0;
 $greyColor: #f9f9f9;
+$loadHeader: 300ms;
+$loadImg:1000ms;
+$LoadDeley: $loadHeader + $loadImg;
+
 $maxMobile: "(max-width: 767px)";
 $maxSmall: "(max-width: 991px)";
 $minSmall: "(min-width: 768px)";

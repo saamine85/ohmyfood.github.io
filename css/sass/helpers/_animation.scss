@@ -1,0 +1,81 @@
+@keyframes imgLoad {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shrik-title {
+  0% {
+    transform: translateX(-100%);
+  }
+  // 50%{
+  //   transform: translateX(-50%);
+  // }
+  100% {
+    transform: translateX(0);
+  }
+}
+//
+@keyframes cardMenu-load {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  // 50%{
+  //   transform: translateX(-50%);
+  // }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cardText {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+
+  }
+  // 50%{
+  //   transform: translateX(-50%);
+  // }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+@keyframes cardTextFc {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+
+  }
+  // 50%{
+  //   transform: translateX(-50%);
+  // }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+@keyframes cardTextSc {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+
+  }
+  // 50%{
+  //   transform: translateX(-50%);
+  // }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}

@@ -2,6 +2,7 @@ header {
   margin: 10px auto;
   text-align: center;
   top: 10px;
+
   @include tab {
     text-align: left;
     box-shadow: 1px 4px 5px 0px #b4b4b4;
@@ -15,6 +16,7 @@ header {
   img {
     width: 50%;
     height: 50%;
+  
     // padding-top: 10px;
     @include tab {
       margin-left: 30px;
