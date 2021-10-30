@@ -2,64 +2,52 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 1;
   }
 }
 
-@keyframes shrik-title {
+@keyframes buttonLoad {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
+    width: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
+    width: 30%;
   }
 }
 
-@keyframes cardMenu-load {
+@keyframes buttonOut {
   0% {
-    transform: translateY(-10px);
+    width: 0%;
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    width: 30%;
     opacity: 1;
   }
 }
 
-@keyframes cardText {
+@keyframes iconLoad {
   0% {
-    transform: translateY(-10px);
     opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    transform: rotate(2turn);
   }
 }
 
-@keyframes cardTextFc {
+@keyframes iconOut {
   0% {
-    transform: translateY(-40px);
-    opacity: 0;
+    opacity: 1;
+    transform: rotate(360deg);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes cardTextSc {
-  0% {
-    transform: translateY(-80px);
     opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: rotate(0);
   }
 }
 
@@ -162,7 +150,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: 1s shrik-title  ease-in;
 }
 
 @media (min-width: 768px) {
@@ -199,7 +186,8 @@ img {
 }
 
 button,
-.command {
+.command,
+.buttonCard {
   display: block;
   margin: 30px auto auto auto;
   font-size: 14px;
@@ -214,7 +202,8 @@ button,
 }
 
 button:hover,
-.command:hover {
+.command:hover,
+.buttonCard:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.4);
@@ -230,6 +219,31 @@ button:hover,
     margin: 0px;
     left: 125%;
     margin-top: 20px;
+  }
+}
+
+.buttonCard {
+  all: unset;
+  color: #fff;
+  margin: 0px 0px;
+  border-radius: 0px 15px 15px 0px;
+  background: #99e2d0;
+  width: 0%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: buttonOut;
+  animation-direction: reverse;
+}
+
+.buttonCard .fa-check-circle {
+  margin-left: 30%;
+  font-size: 20px;
+  animation: 0.9s iconOut 0.1ms linear forwards;
+}
+
+@media (min-width: 992px) {
+  .buttonCard .fa-check-circle {
+    margin-left: 35%;
   }
 }
 

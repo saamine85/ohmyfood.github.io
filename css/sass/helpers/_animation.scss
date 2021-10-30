@@ -2,80 +2,51 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 1;
   }
 }
-@keyframes shrik-title {
+
+@keyframes buttonLoad {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
+    width: 0;
   }
-  // 50%{
-  //   transform: translateX(-50%);
-  // }
   100% {
-    transform: translateX(0);
+    opacity: 1;
+    width: 30%;
   }
 }
-//
-@keyframes cardMenu-load {
+@keyframes buttonOut {
   0% {
-    transform: translateY(-10px);
+    width: 0%;
     opacity: 0;
   }
-  // 50%{
-  //   transform: translateX(-50%);
-  // }
   100% {
-    transform: translateY(0);
+    width: 30%;
     opacity: 1;
   }
 }
-@keyframes cardText {
+
+@keyframes iconLoad {
   0% {
-    transform: translateY(-10px);
     opacity: 0;
-
+    transform: rotate(0deg);
   }
-  // 50%{
-  //   transform: translateX(-50%);
-  // }
   100% {
-    transform: translateY(0);
     opacity: 1;
-
+    transform: rotate(2turn);
   }
 }
-@keyframes cardTextFc {
+@keyframes iconOut {
   0% {
-    transform: translateY(-40px);
-    opacity: 0;
-
-  }
-  // 50%{
-  //   transform: translateX(-50%);
-  // }
-  100% {
-    transform: translateY(0);
     opacity: 1;
-
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(0);
   }
 }
-@keyframes cardTextSc {
-  0% {
-    transform: translateY(-80px);
-    opacity: 0;
 
-  }
-  // 50%{
-  //   transform: translateX(-50%);
-  // }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-
-  }
-}

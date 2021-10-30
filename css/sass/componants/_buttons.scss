@@ -3,7 +3,8 @@ img {
   height: 200px;
 }
 button,
-.command {
+.command,
+.buttonCard {
   display: block;
   margin: 30px auto auto auto;
   font-size: 14px;
@@ -35,5 +36,32 @@ button,
     margin-top: 20px;
     // left: -50%;
     // right: -50%;
+  }
+}
+.buttonCard {
+  all: unset;
+  // display: block;
+  // display: none;
+
+  color: #fff;
+  margin: 0px 0px;
+  border-radius: 0px 15px 15px 0px;
+  background: $TertiaryColor;
+  width: 0%;
+  animation-duration: 1s;
+  // animation-delay: 0.5ms;
+  animation-timing-function: linear;
+  animation-name: buttonOut;
+  animation-direction: reverse;
+
+  .fa-check-circle {
+    margin-left: 30%;
+    font-size: 20px;
+    animation: 0.9s iconOut 0.1ms linear forwards;
+
+    // color: transparent;
+    @include laptop {
+      margin-left: 35%;
+    }
   }
 }

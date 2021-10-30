@@ -2,64 +2,52 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 1;
   }
 }
 
-@keyframes shrik-title {
+@keyframes buttonLoad {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
+    width: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
+    width: 30%;
   }
 }
 
-@keyframes cardMenu-load {
+@keyframes buttonOut {
   0% {
-    transform: translateY(-10px);
+    width: 0%;
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    width: 30%;
     opacity: 1;
   }
 }
 
-@keyframes cardText {
+@keyframes iconLoad {
   0% {
-    transform: translateY(-10px);
     opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    transform: rotate(2turn);
   }
 }
 
-@keyframes cardTextFc {
+@keyframes iconOut {
   0% {
-    transform: translateY(-40px);
-    opacity: 0;
+    opacity: 1;
+    transform: rotate(360deg);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes cardTextSc {
-  0% {
-    transform: translateY(-80px);
     opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: rotate(0);
   }
 }
 
@@ -181,7 +169,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: 1s shrik-title  ease-in;
 }
 
 @media (min-width: 768px) {
@@ -218,7 +205,8 @@ img {
 }
 
 button,
-.command {
+.command,
+.buttonCard {
   display: block;
   margin: 30px auto auto auto;
   font-size: 14px;
@@ -233,7 +221,8 @@ button,
 }
 
 button:hover,
-.command:hover {
+.command:hover,
+.buttonCard:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.4);
@@ -249,6 +238,31 @@ button:hover,
     margin: 0px;
     left: 125%;
     margin-top: 20px;
+  }
+}
+
+.buttonCard {
+  all: unset;
+  color: #fff;
+  margin: 0px 0px;
+  border-radius: 0px 15px 15px 0px;
+  background: #99e2d0;
+  width: 0%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: buttonOut;
+  animation-direction: reverse;
+}
+
+.buttonCard .fa-check-circle {
+  margin-left: 30%;
+  font-size: 20px;
+  animation: 0.9s iconOut 0.1ms linear forwards;
+}
+
+@media (min-width: 992px) {
+  .buttonCard .fa-check-circle {
+    margin-left: 35%;
   }
 }
 
@@ -304,8 +318,6 @@ section .cardMenu h2 {
   padding-top: 30px;
   margin-bottom: 10px;
   width: 0%;
-  animation: 1s cardMenu-load ease-in forwards;
-  opacity: 0;
 }
 
 section .cardMenu h2:hover {
@@ -321,116 +333,51 @@ section .cardMenu h2:hover {
 }
 
 section .cardMenu .cardText {
-  opacity: 0;
-  animation: 1s cardText .9ms ease-in forwards;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   margin: 12px 10px;
   background-color: #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
   padding-left: 10px;
   border-radius: 15px;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-section .cardMenu .cardText .cardText:first-child {
-  animation: 5s cardTextFc .3ms  ease-in forwards;
+section .cardMenu .cardText .text {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px;
 }
 
-section .cardMenu .cardText .cardText:second-child {
-  animation: cardTextSc .6ms  ease-in forwards;
+section .cardMenu .cardText .text p,
+section .cardMenu .cardText .text h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-section .cardMenu .cardText h3 {
-  font-size: 19px;
-  margin-bottom: 5px;
-}
-
-section .cardMenu .cardText p {
-  font-size: 17px;
-  display: flex;
-  justify-content: space-between;
-}
-
-section .cardMenu .cardText p .price {
-  margin-right: 10px;
+section .cardMenu .cardText .price {
+  font-size: 16px;
   font-weight: bold;
-  transition: 0.6s 0.1s right, color ease-in;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 20px;
+  align-self: flex-end;
 }
 
-section .cardMenu .cardText .display {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 0px;
-  border-radius: 0px 15px 15px 0px;
-  margin: 0px;
-  width: 0%;
-  height: 100%;
-  background-color: #99e2d0;
-  box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
-  transition: 0.7s 0.1s width, transform ease-in-out;
-  animation: circle 0.3 infinite ease-in-out;
+section .cardMenu .cardText:hover .buttonCard {
+  width: 30%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-name: buttonLoad;
 }
 
-section .cardMenu .cardText .display .fa-check-circle {
-  color: white;
-  font-size: 26px;
-  position: absolute;
-  top: 35%;
-  right: -30%;
-  transition: 0.8s;
-  opacity: 0;
-}
-
-section .cardMenu .cardText:hover .display {
-  cursor: pointer;
-  width: 20%;
-  opacity: 1;
-}
-
-section .cardMenu .cardText:hover .fa-check-circle {
-  transform: rotate(1turn);
-  opacity: 1;
-  cursor: pointer;
-  right: 30%;
-}
-
-@media (min-width: 992px) {
-  section .cardMenu .cardText:hover .fa-check-circle {
-    right: 35%;
-  }
-}
-
-section .cardMenu .cardText:hover h3 {
-  width: 60%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-section .cardMenu .cardText:hover p {
-  width: 60%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  display: block;
-}
-
-section .cardMenu .cardText:hover .price {
-  position: absolute;
-  color: #9356dc;
-  transition: 0.7s 0.1s position ease;
-  right: 75px;
-}
-
-@media (min-width: 992px) {
-  section .cardMenu .cardText:hover .price {
-    transition: 0.7s 0.1s right ease;
-    right: 95px;
-  }
+section .cardMenu .cardText:hover .buttonCard .fa-check-circle {
+  animation: 0.7s iconLoad 0.1ms linear forwards;
 }
 
 footer {
