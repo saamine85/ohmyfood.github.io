@@ -1,48 +1,8 @@
-// body {
-//   @include mobile {
-//     background-color: blue;
-//   }
-//   @include tab {
-//     background-color: green;
-//   }
-//   @include laptop {
-//     background-color: red;
-//   }
-//   @include large-screen {
-//     background-color: white;
-//   }
-// }
-
-// .page{
-//   aside{
-//     h2 {
-//   padding: 20px;
-//   border: 2px solid rgb(17, 20, 224);
-//   width: 200px;
-//   position: relative;
-//   text-align: center;
-//   .overlay {
-//     @include overlay;
-//     &:hover{
-// background-color: rgba(
-//       red,
-//       0.2
-//     ); //or hex code rgba(#ff0404,.2) or rgba($maincolor,.2)
-//     color: #fff;
-//     }
-
-//   }
-// }
-//   }
-// }
-
 /*start para*/
 header {
-
   @include tab {
     box-shadow: 1px 4px 5px 0px #b4b4b4;
     padding-bottom: 10px;
-    // width: 100% ;
   }
   span {
     display: none;
@@ -96,7 +56,6 @@ header {
   @include tab {
     padding-bottom: 20px;
     background: #fff;
-    // background-color: $TertiaryColor;
   }
   @include laptop {
     position: relative;
@@ -111,14 +70,11 @@ header {
     text-align: center;
     font-size: 26px;
     @include tab {
-      // transform: translateX(160px);
       font-size: 30px;
     }
     @include laptop {
-      // transform: translateX(200px);
     }
     @include large-screen {
-      // transform: translateX(0%);
       font-size: 34px;
     }
   }
@@ -128,16 +84,12 @@ header {
     color: #818181;
     font-size: 16px;
     @include tab {
-      // transform: translateX(255px);
-      // width: fit-content;
       font-size: 16px;
     }
     @include laptop {
-      // transform: translateX(400px);
       font-size: 20px;
     }
     @include large-screen {
-      // transform: translateX(80%);
       font-size: 24px;
     }
   }
@@ -151,9 +103,6 @@ header {
       position: relative;
       top: 0px;
       left: 0px;
-      // display: flex;
-      // justify-content: flex-start;
-      // align-items: center;
     }
     @include laptop {
       top: -280px;
@@ -183,7 +132,6 @@ header {
       }
     }
     p {
-      // text-align: center;
       display: flex;
       align-items: center;
       margin-left: 15px;
@@ -245,7 +193,6 @@ header {
     padding-bottom: 40px;
     margin-top: 40px;
     background-color: $greyColor;
-
     @include tab {
       margin-top: 20px;
       background-color: #fff;
@@ -308,32 +255,22 @@ header {
           object-fit: cover;
           border-radius: 20px 20px 0px 0px;
           @include tab {
-            // width: 50%;
           }
         }
       }
       .cardText {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 5px 10px;
+        position: relative;
         .location {
           padding-bottom: 10px;
-          // margin-right: 10px; // display: none;
-          // h3 {
-          // }
-          // p {
-          // }
         }
-
-        span {
-          font-size: 25px;
-          padding-right: 10px;
-          .fa-heart {
-            &:hover {
-              font-weight: 900;
-              cursor: pointer;
-              color: $primarycolor;
-            }
+        @include span {
+          .far,
+          .fa {
+            right: -10px;
           }
         }
       }

@@ -9,8 +9,8 @@
 
 @keyframes buttonLoad {
   0% {
+    width: 0%;
     opacity: 0;
-    width: 0;
   }
   100% {
     opacity: 1;
@@ -31,12 +31,12 @@
 
 @keyframes iconLoad {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: rotate(0deg);
   }
   100% {
     opacity: 1;
-    transform: rotate(2turn);
+    transform: rotate(1turn);
   }
 }
 
@@ -48,6 +48,18 @@
   100% {
     opacity: 0;
     transform: rotate(0);
+  }
+}
+
+@keyframes progressHeart {
+  0% {
+    transform: scale(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -110,7 +122,7 @@ header span {
 
 @media (min-width: 992px) {
   header span {
-    left: 95%;
+    left: 94%;
     top: 25px;
   }
 }
@@ -159,17 +171,44 @@ ul {
   }
 }
 
-.shrik .fa-heart,
-.note .fa-heart {
+.shrik span,
+.note span {
   font-size: 25px;
-  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.shrik span .far,
+.shrik span .fa,
+.note span .far,
+.note span .fa {
+  position: absolute;
+  right: 30px;
+  top: -16px;
+}
+
+.shrik span .fa,
+.note span .fa {
+  color: transparent;
+}
+
+.shrik span:hover .fa,
+.note span:hover .fa {
+  color: #9356dc;
+  animation-name: progressHeart;
+  animation-duration: 2s;
+}
+
+.shrik span:hover .far,
+.note span:hover .far {
+  color: #9356dc;
 }
 
 @media (min-width: 1200px) {
-  .shrik .fa-heart,
-  .note .fa-heart {
-    font-size: 27px;
-    padding-left: 20px;
+  .shrik span,
+  .note span {
+    font-size: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -224,26 +263,21 @@ button:hover,
 
 .buttonCard {
   all: unset;
-  color: #fff;
+  color: #fdfcfc;
   margin: 0px 0px;
   border-radius: 0px 15px 15px 0px;
   background: #99e2d0;
   width: 0%;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-name: buttonOut;
-  animation-direction: reverse;
 }
 
 .buttonCard .fa-check-circle {
   margin-left: 30%;
   font-size: 20px;
-  animation: 0.9s iconOut 0.1ms linear forwards;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .buttonCard .fa-check-circle {
-    margin-left: 35%;
+    margin-left: 40%;
   }
 }
 
@@ -604,7 +638,9 @@ header span {
 .main section .card .cardText {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 5px 10px;
+  position: relative;
 }
 
 .main section .card .cardText .location {
@@ -613,13 +649,71 @@ header span {
 
 .main section .card .cardText span {
   font-size: 25px;
-  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
 }
 
-.main section .card .cardText span .fa-heart:hover {
-  font-weight: 900;
-  cursor: pointer;
+.main section .card .cardText span .far,
+.main section .card .cardText span .fa {
+  position: absolute;
+  right: 30px;
+  top: -16px;
+}
+
+.main section .card .cardText span .fa {
+  color: transparent;
+}
+
+.main section .card .cardText span:hover .fa {
   color: #9356dc;
+  animation-name: progressHeart;
+  animation-duration: 2s;
+}
+
+.main section .card .cardText span:hover .far {
+  color: #9356dc;
+}
+
+@media (min-width: 1200px) {
+  .main section .card .cardText span {
+    font-size: 30px;
+    margin-right: 30px;
+  }
+}
+
+.main section .card .cardText span {
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+.main section .card .cardText span .far,
+.main section .card .cardText span .fa {
+  position: absolute;
+  right: -10px;
+  top: -16px;
+}
+
+.main section .card .cardText span .fa {
+  color: transparent;
+}
+
+.main section .card .cardText span:hover .fa {
+  color: #9356dc;
+  animation-name: progressHeart;
+  animation-duration: 2s;
+}
+
+.main section .card .cardText span:hover .far {
+  color: #9356dc;
+}
+
+@media (min-width: 1200px) {
+  .main section .card .cardText span {
+    font-size: 30px;
+    margin-right: 30px;
+  }
 }
 
 /*end main*/

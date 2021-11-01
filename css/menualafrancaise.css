@@ -9,8 +9,8 @@
 
 @keyframes buttonLoad {
   0% {
+    width: 0%;
     opacity: 0;
-    width: 0;
   }
   100% {
     opacity: 1;
@@ -31,12 +31,12 @@
 
 @keyframes iconLoad {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: rotate(0deg);
   }
   100% {
     opacity: 1;
-    transform: rotate(2turn);
+    transform: rotate(1turn);
   }
 }
 
@@ -48,6 +48,29 @@
   100% {
     opacity: 0;
     transform: rotate(0);
+  }
+}
+
+@keyframes progressHeart {
+  0% {
+    transform: scale(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes carDeley {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -110,7 +133,7 @@ header span {
 
 @media (min-width: 992px) {
   header span {
-    left: 95%;
+    left: 94%;
     top: 25px;
   }
 }
@@ -178,17 +201,44 @@ ul {
   }
 }
 
-.shrik .fa-heart,
-.note .fa-heart {
+.shrik span,
+.note span {
   font-size: 25px;
-  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.shrik span .far,
+.shrik span .fa,
+.note span .far,
+.note span .fa {
+  position: absolute;
+  right: 30px;
+  top: -16px;
+}
+
+.shrik span .fa,
+.note span .fa {
+  color: transparent;
+}
+
+.shrik span:hover .fa,
+.note span:hover .fa {
+  color: #9356dc;
+  animation-name: progressHeart;
+  animation-duration: 2s;
+}
+
+.shrik span:hover .far,
+.note span:hover .far {
+  color: #9356dc;
 }
 
 @media (min-width: 1200px) {
-  .shrik .fa-heart,
-  .note .fa-heart {
-    font-size: 27px;
-    padding-left: 20px;
+  .shrik span,
+  .note span {
+    font-size: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -243,26 +293,21 @@ button:hover,
 
 .buttonCard {
   all: unset;
-  color: #fff;
+  color: #fdfcfc;
   margin: 0px 0px;
   border-radius: 0px 15px 15px 0px;
   background: #99e2d0;
   width: 0%;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-name: buttonOut;
-  animation-direction: reverse;
 }
 
 .buttonCard .fa-check-circle {
   margin-left: 30%;
   font-size: 20px;
-  animation: 0.9s iconOut 0.1ms linear forwards;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .buttonCard .fa-check-circle {
-    margin-left: 35%;
+    margin-left: 40%;
   }
 }
 
@@ -290,14 +335,19 @@ button:hover,
   }
 }
 
+.hero img {
+  width: 100%;
+  object-fit: cover;
+}
+
 section {
   padding-bottom: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   section {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -335,12 +385,29 @@ section .cardMenu h2:hover {
 section .cardMenu .cardText {
   display: flex;
   justify-content: space-between;
-  margin: 12px 10px;
+  margin: 12px 20px;
   background-color: #fff;
   padding-left: 10px;
   border-radius: 15px;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+  animation: carDeley 2000ms forwards;
   cursor: pointer;
+}
+
+section .cardMenu .cardText--1 {
+  animation-delay: 500ms;
+}
+
+section .cardMenu .cardText--2 {
+  animation-delay: 1000ms;
+}
+
+section .cardMenu .cardText--3 {
+  animation-delay: 1500ms;
+}
+
+section .cardMenu .cardText--4 {
+  animation-delay: 2000ms;
 }
 
 section .cardMenu .cardText .text {
@@ -358,6 +425,10 @@ section .cardMenu .cardText .text h3 {
   white-space: nowrap;
 }
 
+section .cardMenu .cardText .text h3 {
+  padding-bottom: 5px;
+}
+
 section .cardMenu .cardText .price {
   font-size: 16px;
   font-weight: bold;
@@ -369,15 +440,26 @@ section .cardMenu .cardText .price {
 }
 
 section .cardMenu .cardText:hover .buttonCard {
-  width: 30%;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-direction: normal;
   animation-name: buttonLoad;
+  animation-fill-mode: forwards;
 }
 
 section .cardMenu .cardText:hover .buttonCard .fa-check-circle {
-  animation: 0.7s iconLoad 0.1ms linear forwards;
+  animation: 1s iconLoad linear forwards;
+}
+
+section .cardMenu .cardText:not(:hover) .buttonCard {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: buttonOut;
+  animation-direction: reverse;
+}
+
+section .cardMenu .cardText:not(:hover) .buttonCard .fa-check-circle {
+  animation: 1s iconOut linear forwards;
 }
 
 footer {

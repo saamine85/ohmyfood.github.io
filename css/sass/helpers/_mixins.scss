@@ -19,6 +19,34 @@
     @content;
   }
 }
+@mixin span {
+  span {
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    .far,
+    .fa {
+      position: absolute;
+      right: 30px;
+      top: -16px;
+    }
+    .fa {
+      color: transparent;
+    }
+    &:hover .fa {
+      color: $primarycolor;
+      animation-name: progressHeart;
+      animation-duration: 2s;
+    }
+    &:hover .far {
+      color: $primarycolor;
+    }
+    @include large-screen {
+      font-size: 30px;
+      margin-right: 30px;
+    }
+  }
+}
 // mixin overlay parent position relative
 // @mixin overlay {
 //   position:absolute;
@@ -29,31 +57,15 @@
 //   cursor: pointer;
 // }
 // mixin prefixer
-@mixin prefixer($property ,$value ,$prefixes: ()){
-  @each $prefix  in $prefixes {
-    #{'-'+ $prefix + '-' + $property}:$value;
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-'+ $prefix + '-' + $property}: $value;
   }
-  #{$property}:$value;
+  #{$property}: $value;
 }
 //mixin animation
 @mixin keyFrame($animationName) {
   @keyframes #{$animationName} {
     @content;
   }
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -40,28 +40,22 @@ button,
 }
 .buttonCard {
   all: unset;
-  // display: block;
-  // display: none;
-
-  color: #fff;
+  color: rgb(253, 252, 252);
   margin: 0px 0px;
   border-radius: 0px 15px 15px 0px;
   background: $TertiaryColor;
   width: 0%;
-  animation-duration: 1s;
-  // animation-delay: 0.5ms;
-  animation-timing-function: linear;
-  animation-name: buttonOut;
-  animation-direction: reverse;
+  // position: relative;
 
+  // opacity: 1;
   .fa-check-circle {
+    // position: absolute;
+    // right: -20px;
+    // bottom: 20px;
     margin-left: 30%;
     font-size: 20px;
-    animation: 0.9s iconOut 0.1ms linear forwards;
-
-    // color: transparent;
-    @include laptop {
-      margin-left: 35%;
+    @include tab {
+    margin-left: 40%;
     }
   }
 }
