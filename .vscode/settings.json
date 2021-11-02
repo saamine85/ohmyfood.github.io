@@ -1,4 +1,5 @@
 {
   "editor.tabSize": 8,
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "liveServer.settings.port": 5501
 }

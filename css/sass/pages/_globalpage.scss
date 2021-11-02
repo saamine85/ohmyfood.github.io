@@ -4,6 +4,24 @@ html {
 body {
   font-family: roboto;
 }
+.loader{
+  background-color: rgb(152, 20, 240);
+
+}
+.wrapper {
+  opacity: 0;
+  animation: fadIn 5s 5s forwards;
+  @keyframes fadIn {
+    0% {
+      opacity: 0;
+      // background-color: rgb(174, 116, 221);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
 
 ul {
   list-style: none;

@@ -3,6 +3,7 @@
 @import "./helpers/functions";
 // all the site depend from this 3 import should be first
 @import "./Layout/grid";
+@import "./componants/loader";
 
 @import "./Layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
 @import "./componants/buttons";
