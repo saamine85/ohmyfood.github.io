@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: roboto;
 }
@@ -31,7 +34,8 @@ ul {
       top: -16px;
     }
     .fa {
-      color: transparent;
+      opacity: 0;
+      transition: 1s opacity;
     }
     &:hover .fa {
       color: $primarycolor;

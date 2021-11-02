@@ -127,9 +127,13 @@ button:hover,
   border-radius: 0px 15px 15px 0px;
   background: #99e2d0;
   width: 0%;
+  transition: ease-in-out 0.9s;
 }
 
 .buttonCard .fa-check-circle {
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: 0.9s opacity, transform;
   margin-left: 30%;
   font-size: 20px;
 }
@@ -165,7 +169,7 @@ header span {
   .para {
     position: absolute;
     right: 30px;
-    top: 10px;
+    top: 0px;
     padding-top: 20px;
     box-shadow: none;
     width: fit-content;
@@ -541,6 +545,10 @@ header span {
 }
 
 /*end main*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: roboto;
 }
@@ -587,7 +595,8 @@ ul {
 
 .shrik span .fa,
 .note span .fa {
-  color: transparent;
+  opacity: 0;
+  transition: 1s opacity;
 }
 
 .shrik span:hover .fa,
@@ -626,47 +635,25 @@ ul {
   }
 }
 
-@keyframes buttonLoad {
+@keyframes loadOut {
   0% {
     width: 0%;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    width: 30%;
-  }
-}
-
-@keyframes buttonOut {
-  0% {
-    width: 0%;
-    opacity: 0;
   }
   100% {
     width: 30%;
-    opacity: 1;
   }
 }
 
 @keyframes iconLoad {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: rotate(0deg);
+  }
+  50% {
   }
   100% {
     opacity: 1;
     transform: rotate(1turn);
-  }
-}
-
-@keyframes iconOut {
-  0% {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(0);
   }
 }
 

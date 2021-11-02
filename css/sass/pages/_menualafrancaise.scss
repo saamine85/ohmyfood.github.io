@@ -4,7 +4,6 @@
     object-fit: cover;
   }
 }
-
 section {
   padding-bottom: 40px;
   @include laptop {
@@ -44,11 +43,13 @@ section {
       border-radius: 15px;
       box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
       animation: carDeley $durCard forwards;
+      opacity: 0;
       @for $i from 1 through 4 {
-            &--#{$i} {
-                animation-delay: $deleyCard * $i;
-            }}
-      
+        &--#{$i} {
+          animation-delay: $deleyCard * $i;
+        }
+      }
+
       .text {
         width: 100%;
         text-overflow: ellipsis;
@@ -75,26 +76,60 @@ section {
         align-self: flex-end;
       }
       &:hover .buttonCard {
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-direction: normal;
-        animation-name: buttonLoad;
-        animation-fill-mode: forwards;
+        animation-name: loadOut;
+        width: 30%;
+        animation-duration: .9s;
         .fa-check-circle {
-          animation: 1s iconLoad linear forwards;
+          opacity: 1;
+          animation-name: iconLoad;
+          animation-duration: .9s;
         }
       }
-      &:not(:hover) .buttonCard {
-        animation-duration: 1s;
-        // animation-delay: 0.5ms;
-        animation-timing-function: linear;
-        animation-name: buttonOut;
-        animation-direction: reverse;
 
-        .fa-check-circle {
-          animation: 1s iconOut linear forwards;
-        }
-      }
+      // animation-name: buttonOut;
+
+      // transition: ease-out 0.3s;
+      // &.buttonCard {
+      //     animation-duration: 0.9s;
+      //   // animation-delay: 0.5ms;
+      //   animation-timing-function: linear;
+      //   animation-fill-mode: backwards;
+      //   animation-name: buttonOut;
+      //   // animation-direction: reverse;
+      //   .fa-check-circle {
+      //     animation: 1s iconLoad linear forwards;
+      //   }
+      // }
+      // &.buttonCard {
+
+      //   animation-duration: 0.9s;
+      //   animation-name: buttonOut;
+      //   animation-timing-function: linear;
+      //   animation-fill-mode: forwards;
+      //   .fa-check-circle {
+      //     animation: 1s iconLoad linear forwards;
+      //   }
+      // }
+      // &:hover .buttonCard {
+      //   // animation-direction: reverse;
+      //   animation-duration: 0.9s;
+      //   animation-name: buttonLoad;
+      //   animation-timing-function: linear;
+      //   animation-fill-mode: forwards;
+      //   .fa-check-circle {
+      //     animation: 1s iconLoad linear forwards;
+      //   }
+      // }
+      // &:not(:hover) .buttonCard {
+      // animation-duration: .5s;
+      // // animation-delay: 0.5ms;
+      // animation-timing-function: linear;
+      // animation-name: buttonOut;
+      // animation-direction: reverse;
+      // .fa-check-circle {
+      //   animation: 1s iconOut linear forwards;
+      // }
+      // }
       cursor: pointer;
     }
   }
