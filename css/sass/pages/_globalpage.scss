@@ -10,7 +10,7 @@ body {
 }
 .wrapper {
   opacity: 0;
-  animation: fadIn 5s 5s forwards;
+  animation: fadIn 2s 3s forwards;
   @keyframes fadIn {
     0% {
       opacity: 0;
@@ -32,7 +32,7 @@ ul {
 .note {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
-  font-weight: 200px;
+  font-weight: 200;
   letter-spacing: 1px;
   margin-left: 20px;
   display: flex;

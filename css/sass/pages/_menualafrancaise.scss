@@ -4,7 +4,7 @@
     object-fit: cover;
   }
 }
-section {
+.pageSection {
   padding-bottom: 40px;
   @include laptop {
     display: grid;

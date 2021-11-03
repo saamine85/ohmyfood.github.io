@@ -5,11 +5,17 @@
 @import "./Layout/grid";
 @import "./componants/loader";
 
-@import "./Layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
-@import "./componants/buttons";
-
-@import "./pages/accueil";
 @import "./pages/globalpage";
+@import "./Layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
+@import "./Layout/main";
+@import "./componants/hero";
+@import "./pages/accueil";
+@import "./pages/menualafrancaise";
+@import "./componants/buttons";
 @import "./helpers/animation";
+
+// @import "./pages/globalpage";
+
+// @import "./componants/buttons";
 
 @import "./Layout/footer";

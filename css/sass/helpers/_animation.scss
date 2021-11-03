@@ -20,12 +20,9 @@
     opacity: 0;
     transform: rotate(0deg);
   }
-  50% {
-  }
   100% {
     opacity: 1;
     transform: rotate(1turn);
-    
   }
 }
 @keyframes progressHeart {
