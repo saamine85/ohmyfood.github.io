@@ -50,7 +50,6 @@
           animation-delay: $deleyCard * $i;
         }
       }
-
       .text {
         width: 100%;
         text-overflow: ellipsis;
@@ -78,60 +77,13 @@
       }
       &:hover .buttonCard {
         transition: all 2s ;
-        // animation-name: loadOut;
         width: 30%;
-        animation-duration: .9s;
         .fa-check-circle {
           opacity: 1;
           animation-name: iconLoad;
           animation-duration: .9s;
         }
       }
-
-      // animation-name: buttonOut;
-
-      // transition: ease-out 0.3s;
-      // &.buttonCard {
-      //     animation-duration: 0.9s;
-      //   // animation-delay: 0.5ms;
-      //   animation-timing-function: linear;
-      //   animation-fill-mode: backwards;
-      //   animation-name: buttonOut;
-      //   // animation-direction: reverse;
-      //   .fa-check-circle {
-      //     animation: 1s iconLoad linear forwards;
-      //   }
-      // }
-      // &.buttonCard {
-
-      //   animation-duration: 0.9s;
-      //   animation-name: buttonOut;
-      //   animation-timing-function: linear;
-      //   animation-fill-mode: forwards;
-      //   .fa-check-circle {
-      //     animation: 1s iconLoad linear forwards;
-      //   }
-      // }
-      // &:hover .buttonCard {
-      //   // animation-direction: reverse;
-      //   animation-duration: 0.9s;
-      //   animation-name: buttonLoad;
-      //   animation-timing-function: linear;
-      //   animation-fill-mode: forwards;
-      //   .fa-check-circle {
-      //     animation: 1s iconLoad linear forwards;
-      //   }
-      // }
-      // &:not(:hover) .buttonCard {
-      // animation-duration: .5s;
-      // // animation-delay: 0.5ms;
-      // animation-timing-function: linear;
-      // animation-name: buttonOut;
-      // animation-direction: reverse;
-      // .fa-check-circle {
-      //   animation: 1s iconOut linear forwards;
-      // }
-      // }
       cursor: pointer;
     }
   }
