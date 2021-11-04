@@ -102,6 +102,9 @@
 }
 
 @keyframes hidden {
+  80% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -796,6 +799,7 @@ header span .fa-arrow-left {
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
   animation: carDeley 2000ms forwards;
   opacity: 0;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -845,7 +849,7 @@ header span .fa-arrow-left {
 }
 
 .pageSection .cardMenu .cardText:hover .buttonCard {
-  animation-name: loadOut;
+  transition: all 2s;
   width: 30%;
   animation-duration: .9s;
 }
