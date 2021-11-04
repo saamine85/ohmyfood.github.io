@@ -851,7 +851,6 @@ header span .fa-arrow-left {
 .pageSection .cardMenu .cardText:hover .buttonCard {
   transition: all 2s;
   width: 30%;
-  animation-duration: .9s;
 }
 
 .pageSection .cardMenu .cardText:hover .buttonCard .fa-check-circle {
