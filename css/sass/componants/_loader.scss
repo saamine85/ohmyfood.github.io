@@ -21,14 +21,12 @@
     margin: 0px;
     padding: 0px;
     li {
-      // opacity: 1;
       background-color: #ff79da;
       width: 20px;
       height: 20px;
       border-radius: 50%;
       margin: 0px 5px;
       animation: flash 1.2s linear infinite  alternate;
-      // animation-iteration-count: 2;
       &:nth-child(1) {
         animation-delay: 0.1s;
       }
@@ -49,13 +47,7 @@
       }
     }
   }
-
   @keyframes flash {
-    // 0% {
-    //   background-color: #ff79da;
-    //   box-shadow: none;
-    //   opacity: 1;
-    // }
     0% {
       background-color: #ff79da;
       box-shadow: none;

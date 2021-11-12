@@ -2,20 +2,16 @@
 @import "./helpers/mixins"; // variable and mixins and function before all other import
 @import "./helpers/functions";
 // all the site depend from this 3 import should be first
-@import "./Layout/grid";
+@import "./layout/grid";
 @import "./componants/loader";
 
 @import "./pages/globalpage";
-@import "./Layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
-@import "./Layout/main";
+@import "./layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
+@import "./layout/main";
 @import "./componants/hero";
 @import "./pages/accueil";
 @import "./pages/menualafrancaise";
 @import "./componants/buttons";
 @import "./helpers/animation";
 
-// @import "./pages/globalpage";
-
-// @import "./componants/buttons";
-
-@import "./Layout/footer";
+@import "./layout/footer";

@@ -12,7 +12,6 @@ button,
   border: none;
   border-radius: 40px;
   color: #fff;
-  // background: $secondaryColor;
   background: linear-gradient(
     175deg,
     rgba($secondaryColor, 1) 0%,
@@ -34,8 +33,6 @@ button,
     margin: 0px;
     left: 125%;
     margin-top: 20px;
-    // left: -50%;
-    // right: -50%;
   }
 }
 .buttonCard {
@@ -46,18 +43,6 @@ button,
   background: $TertiaryColor;
   width: 0%;
   transition: ease-in-out 0.9s;
-
-  // animation-duration: 0.9s;
-  // // animation-delay: 0.5ms;
-  // animation-timing-function: linear;
-  // animation-name: buttonLoad;
-  // animation-direction: reverse;
-  // .fa-check-circle {
-  //   animation: 1s iconOut linear forwards;
-  // }
-  // position: relative;
-
-  // opacity: 1;
   .fa-check-circle {
     opacity: 0;
     transform: rotate(0deg);

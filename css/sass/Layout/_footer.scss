@@ -1,14 +1,8 @@
 footer {
   background-color: #383737;
   padding-bottom: 25px;
-  // position: relative;
   @include tab {
     padding-top: 50px;
-    // margin-bottom: 0px;
-  }
-  @include laptop {
-    // padding-top: 30px;
-    // margin-bottom: 0px;
   }
   img {
     filter: invert(1);
@@ -22,13 +16,10 @@ footer {
     @include tab {
       padding-top: 0px;
       margin-left: 35%;
-      // margin-left: calc(50% - 100px);
       width: 250px;
-      // padding-bottom: 40px;
     }
-    @include laptop{
+    @include laptop {
       margin-left: 40%;
-
     }
   }
   ul {
@@ -43,7 +34,6 @@ footer {
       @include laptop {
         margin-left: 20px;
         padding-bottom: 40px;
-        // font-size: 25px;
       }
       i {
         width: 4px;
@@ -54,12 +44,9 @@ footer {
         @include tab {
           font-size: 16px;
           margin-right: 20px;
-
-          // margin-left: 0px;
         }
         @include laptop {
           margin-right: 30px;
-          // padding-bottom: 100px;
           font-size: 26px;
         }
       }
@@ -67,15 +54,11 @@ footer {
         padding-left: 0px;
         color: #fff;
         text-decoration: none;
-         @include tab {
+        @include tab {
           font-size: 16px;
           margin-right: 20px;
-
-          // margin-left: 0px;
         }
         @include laptop {
-          // margin-left: 50px;
-
           font-size: 26px;
         }
         &:hover {
